@@ -37,7 +37,8 @@ class Scraper
           blog: blog_link,
           profile_quote: profile.css("div.vitals-text-container div.profile-quote").text,
           bio: profile.css("div.details-container div div div.description-holder p").text
-        }.delete_if{|key,value| value == nil}
+        }
+        #.delete_if{|key,value| value == nil}
 
       end
       student_hash_profile
